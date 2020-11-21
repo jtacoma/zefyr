@@ -403,3 +403,11 @@ class BlockAttributeBuilder extends NotusAttributeBuilder<String> {
   NotusAttribute<String> get quote =>
       NotusAttribute<String>._(key, scope, 'quote');
 }
+
+/// Applies bold style to a text segment.
+
+class CustomAttribute<T> extends NotusAttribute<T> {
+
+  const CustomAttribute() : super._(key, NotusAttributeScope.inline, true);
+
+}
